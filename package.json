@@ -1,0 +1,19 @@
+{
+  "name": "chatterbox",
+  "version": "0.0.1",
+  "main": "server/main.js",
+  "author": "Jim OBrien",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha server/spec"
+  },
+  "dependencies" : {
+    "express": "3.x",
+    "mongodb": "~1.4.8"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.4",
+    "request": "^2.34.0",
+    "chai": "^1.9.0"
+  }
+}
