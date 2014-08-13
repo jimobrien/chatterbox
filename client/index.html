@@ -3,36 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>chatterbox</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Lato|Inconsolata|Pacifico|Open Sans' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container main">
+      <!-- rooms -->
+      <div class="rooms col-md-2">
+        <h4> Rooms <span class='glyphicon glyphicon-plus add-room'></span></h4>
+        <ul class="room-list">
+        </ul>
+      </div>
+
+      <!-- chat box -->
+      <div class="chat-container col-md-8">
+
+      </div>
+    </div>
+
+    <script>
+     var Chattrbox = {
+      Views: {},
+      Models: {},
+      Collections: {},
+     };
+    </script>
 
     <!-- dependencies -->
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+
+    <!-- models -->
+    <script src="../compiled/client/scripts/models/Message.js"></script>
+    <script src="../compiled/client/scripts/collections/Messages.js"></script>
+    <script src="../compiled/client/scripts/models/ChatWindow.js"></script>
     
-    <!-- your scripts -->
-    <script src="scripts/config.js"></script>
-    <script src="scripts/app.js"></script>
-  </head>
-  <body>
-    <script>
-      $(function(){
-        app.init();
-      });
-    </script>
-    <div id="main">
-      <h1>chatterbox</h1>
-      <!-- Your HTML goes here! -->
-      <div class="spinner"><img src="images/spiffygif_46x46.gif"></div>
-      <div id="rooms">
-        Room: 
-        <select id="roomSelect">
-        </select>
-      </div>
-      <form action="#" id="send" method="post">
-        <input type="text" name="message" id="message"/>
-        <input type="submit" name="submit" class="submit"/>
-      </form>
-      <div id="chats"></div>
-    </div>
+    <!-- views -->
+    <!-- <script src="../compiled/client/scripts/views/RoomView.js"></script>
+    <script src="../compiled/client/scripts/views/RoomsView.js"></script> -->
+    <script src="../compiled/client/scripts/views/Message.js"></script>
+    <script src="../compiled/client/scripts/views/Messages.js"></script>
+    <script src="../compiled/client/scripts/views/ChatWindow.js"></script>
+    <script src="../compiled/client/scripts/views/ChatInput.js"></script>
+    
+    <script src="../compiled/client/scripts/main.js"></script>
+    
   </body>
 </html>
