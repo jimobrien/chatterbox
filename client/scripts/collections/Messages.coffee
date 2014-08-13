@@ -6,7 +6,4 @@ class Chattrbox.Collections.Messages extends Backbone.Collection
 
 	initialize: ->
 		self = @
-		@fetch().success( (data) -> 
-			data.map (message) ->
-				self.add message
-		)
+		@fetch().success( (data) -> self.reset data )
